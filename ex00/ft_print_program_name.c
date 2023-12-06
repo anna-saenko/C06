@@ -15,5 +15,9 @@ void	ft_print_program_name(char *str)
 
 int	main(int argc, char *argv[])
 {
+	if (!argc)
+	{
+		return (0);
+	}
 	ft_print_program_name(argv[0]);
 }
