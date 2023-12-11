@@ -12,25 +12,13 @@
 
 #include <unistd.h>
 
-int	ft_find_argv_size(char *argv[])
-{
-	int	i;
-
-	i = 0;
-	while (argv[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-void	ft_rev_params(char *argv[])
+void	ft_rev_params(int argc, char *argv[])
 {
 	int		i;
 	int		j;
 	char	*param;
 
-	i = ft_find_argv_size(argv) - 1;
+	i = argc - 1;
 	while (i > 0)
 	{
 		j = 0;
@@ -53,6 +41,6 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-		ft_rev_params(argv);
+		ft_rev_params(argc, argv);
 	}
 }

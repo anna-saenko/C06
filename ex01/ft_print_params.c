@@ -12,14 +12,14 @@
 
 #include <unistd.h>
 
-void	ft_print_params(char *argv[])
+void	ft_print_params(int argc, char *argv[])
 {
 	int		i;
 	int		j;
 	char	*param;
 
 	i = 1;
-	while (argv[i])
+	while (i < argc)
 	{
 		j = 0;
 		param = argv[i];
@@ -39,5 +39,5 @@ int	main(int argc, char *argv[])
 	{
 		return (0);
 	}
-	ft_print_params(argv);
+	ft_print_params(argc, argv);
 }
